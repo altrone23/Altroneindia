@@ -43,7 +43,7 @@ const ContactSection = () => {
     // You'll need to replace these with your actual EmailJS details from the EmailJS dashboard
     const serviceId = 'service_altrone'; // Create this in EmailJS dashboard
     const templateId = 'template_contact_form'; // Create this in EmailJS dashboard
-    const userId = 'YOUR_USER_ID'; // Your EmailJS user ID
+    const userId = 'virtonic10@gmail.com'; // Your EmailJS user ID
     
     const templateParams = {
       from_name: formData.name,
