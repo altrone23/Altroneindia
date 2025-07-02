@@ -19,7 +19,7 @@ const TeamSection = () => {
     {
       name: "Kavirajan E",
       position: "Co-Founder",
-      image: "/people/Kavi.jpg",
+      image: "/people/kavi.jpg",
       bio: "With a Computer Science and specialization in machine learning, Kavirajan leads our technical strategy and innovation. His research has been published in top AI conferences worldwide.",
       social: {
         linkedin: "#",
