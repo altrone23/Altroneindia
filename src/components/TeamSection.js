@@ -9,7 +9,7 @@ const TeamSection = () => {
     {
       name: "Balavignesh A U",
       position: "CEO & Founder",
-      image: "",
+      image: "/people/Bala.jpg",
       bio: "Balavignesh has hands-on experience in full-stack development, having built platforms like INSPECTX Pro. He founded AltroneIndia with a vision to create impactful, tech-driven solutions for modern businesses",
       social: {
         linkedin: "#",
@@ -19,7 +19,7 @@ const TeamSection = () => {
     {
       name: "Kavirajan E",
       position: "Co-Founder",
-      image: "",
+      image: "/people/Kavi.jpg",
       bio: "With a PhD in Computer Science and specialization in machine learning, Priya leads our technical strategy and innovation. Her research has been published in top AI conferences worldwide.",
       social: {
         linkedin: "#",

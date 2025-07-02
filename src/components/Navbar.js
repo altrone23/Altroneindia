@@ -52,9 +52,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-primary-600 hover:scale-105 transition-transform duration-300 cursor-pointer">
-              AltroneIndia
-            </span>
+            <div className="flex items-center space-x-3 group cursor-pointer">
+              <img 
+                src="/nav_logo.png" 
+                alt="AltroneIndia Logo" 
+                className="w-16 h-16 rounded-full object-contain bg-white p-1"
+              />
+              <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 bg-clip-text text-transparent hover:from-accent-600 hover:via-primary-600 hover:to-primary-700 transition-all duration-300 tracking-tight">
+                AltroneIndia
+              </span>
+            </div>
           </div>
           
           {/* Desktop Menu */}

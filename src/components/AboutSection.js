@@ -76,11 +76,11 @@ const AboutSection = () => {
             >
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center group">
-                  <p className="text-4xl font-bold text-primary-600 group-hover:text-accent-500 transition-colors duration-300">50+</p>
+                  <p className="text-4xl font-bold text-primary-600 group-hover:text-accent-500 transition-colors duration-300">8+</p>
                   <p className="text-sm text-gray-600">Experts</p>
                 </div>
                 <div className="text-center group">
-                  <p className="text-4xl font-bold text-primary-600 group-hover:text-accent-500 transition-colors duration-300">100+</p>
+                  <p className="text-4xl font-bold text-primary-600 group-hover:text-accent-500 transition-colors duration-300">10+</p>
                   <p className="text-sm text-gray-600">Projects</p>
                 </div>
               </div>

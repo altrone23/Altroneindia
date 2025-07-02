@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -12,8 +11,6 @@ const ContactSection = () => {
   
   const [activeField, setActiveField] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const sectionRef = useRef(null);
   const formRef = useRef(null);
   const contactInfoRef = useRef(null);
@@ -36,47 +33,20 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(null);
-    
-    // EmailJS service configuration
-    // You'll need to replace these with your actual EmailJS details from the EmailJS dashboard
-    const serviceId = 'service_altrone'; // Create this in EmailJS dashboard
-    const templateId = 'template_contact_form'; // Create this in EmailJS dashboard
-    const userId = 'virtonic10@gmail.com'; // Your EmailJS user ID
-    
-    const templateParams = {
-      from_name: formData.name,
-      reply_to: formData.email,
-      phone_number: formData.phone || 'Not provided',
-      subject: formData.subject,
-      message: formData.message,
-      to_email: 'altrone23@gmail.com'
-    };
-    
-    emailjs.send(serviceId, templateId, templateParams, userId)
-      .then((response) => {
-        console.log('Email sent successfully:', response);
-        setFormSubmitted(true);
-        setIsSubmitting(false);
-        
-        // Reset form after successful submission
-        setTimeout(() => {
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            subject: '',
-            message: '',
-          });
-          setFormSubmitted(false);
-        }, 5000);
-      })
-      .catch((error) => {
-        console.error('Email send error:', error);
-        setSubmitError('There was a problem sending your message. Please try again later.');
-        setIsSubmitting(false);
+    // In a real application, you would handle form submission to backend
+    console.log('Form submitted:', formData);
+    setFormSubmitted(true);
+    // Reset form after successful submission
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
       });
+      setFormSubmitted(false);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -362,19 +332,12 @@ const ContactSection = () => {
                     </div>
                   </div>
                   
-                  {submitError && (
-                    <div className="bg-red-50 text-red-700 p-3 rounded-lg">
-                      <p>{submitError}</p>
-                    </div>
-                  )}
-                  
                   <div className="text-right">
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className={`bg-primary-600 text-white py-3 px-8 rounded-lg font-medium hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+                      className="bg-primary-600 text-white py-3 px-8 rounded-lg font-medium hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      Send Message
                     </button>
                   </div>
                 </form>
