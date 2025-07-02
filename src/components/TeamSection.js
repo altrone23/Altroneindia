@@ -26,26 +26,26 @@ const TeamSection = () => {
         twitter: "#"
       }
     },
-    {
-      name: "Vikram Singh",
-      position: "Head of AI Research",
-      image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-      bio: "Vikram leads our AI research initiatives, focusing on developing novel algorithms and approaches for real-world business applications. He previously worked at leading research labs in Silicon Valley.",
-      social: {
-        linkedin: "#",
-        twitter: "#"
-      }
-    },
-    {
-      name: "Ananya Desai",
-      position: "Head of Cybersecurity",
-      image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-      bio: "A certified ethical hacker with extensive experience in information security, Ananya ensures our solutions meet the highest security standards while helping clients safeguard their digital assets.",
-      social: {
-        linkedin: "#",
-        twitter: "#"
-      }
-    },
+    // {
+    //   name: "Vikram Singh",
+    //   position: "Head of AI Research",
+    //   image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    //   bio: "Vikram leads our AI research initiatives, focusing on developing novel algorithms and approaches for real-world business applications. He previously worked at leading research labs in Silicon Valley.",
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // },
+    // {
+    //   name: "Ananya Desai",
+    //   position: "Head of Cybersecurity",
+    //   image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    //   bio: "A certified ethical hacker with extensive experience in information security, Ananya ensures our solutions meet the highest security standards while helping clients safeguard their digital assets.",
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // },
   ], []);
 
   useEffect(() => {
