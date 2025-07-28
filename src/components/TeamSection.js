@@ -12,7 +12,7 @@ const TeamSection = () => {
       image: "/people/Bala.jpg",
       bio: "Balavignesh has hands-on experience in full-stack development, having built platforms like INSPECTX Pro. He founded AltroneIndia with a vision to create impactful, tech-driven solutions for modern businesses",
       social: {
-        linkedin: "#",
+        linkedin: "www.linkedin.com/in/balavignesh1010",
         twitter: "#"
       }
     },
@@ -22,7 +22,7 @@ const TeamSection = () => {
       image: "/people/kavi.jpg",
       bio: "With a Computer Science and specialization in machine learning, Kavirajan leads our technical strategy and innovation.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/kavirajan05",
         twitter: "#"
       }
     },
@@ -35,7 +35,7 @@ const TeamSection = () => {
       position: "Tech Lead",
       image: "/people/mukesh.jpg",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/mukesh-n-aa78232b9",
         twitter: "#"
       }
     },
@@ -44,7 +44,7 @@ const TeamSection = () => {
       position: "Tech Lead",
       image: "/people/iniy.jpg",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/iniya-rajan-182000289",
         twitter: "#"
       }
     },
@@ -53,7 +53,7 @@ const TeamSection = () => {
       position: "Tech Lead",
       image: "/people/savishnu.jpg",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/savishnu-l-872a962b9",
         twitter: "#"
       }
     }

@@ -56,11 +56,8 @@ const Navbar = () => {
               <img 
                 src="/nav_logo.png" 
                 alt="AltroneIndia Logo" 
-                className="w-16 h-16 rounded-full object-contain bg-white p-1"
+                className="w-26 h-24  object-contain bg-white p-1"
               />
-              <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 bg-clip-text text-transparent hover:from-accent-600 hover:via-primary-600 hover:to-primary-700 transition-all duration-300 tracking-tight">
-                AltroneIndia
-              </span>
             </div>
           </div>
           
