@@ -1,3 +1,15 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+User-agent: Gemini
 Disallow:
+
+User-agent: ChatGPT
+Disallow:
+
+User-agent: OpenAI
+Disallow:
+User-agent: OI_SearchBot
+Allow: /
+
+User-agent: *
+Allow: /
