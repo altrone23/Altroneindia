@@ -31,22 +31,47 @@ const ContactSection = () => {
     setActiveField(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real application, you would handle form submission to backend
-    console.log('Form submitted:', formData);
-    setFormSubmitted(true);
-    // Reset form after successful submission
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
+    
+    try {
+      // Send form data to Formspree
+      const response = await fetch('https://formspree.io/f/xyzgwqkd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
       });
-      setFormSubmitted(false);
-    }, 5000);
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        setFormSubmitted(true);
+        
+        // Reset form after successful submission
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: '',
+          });
+          setFormSubmitted(false);
+        }, 5000);
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error sending message. Please check your connection and try again.');
+    }
   };
 
   useEffect(() => {

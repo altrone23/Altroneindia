@@ -96,8 +96,8 @@ const HeroSection = () => {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-purple-400 flex items-center justify-center text-white font-bold">R</div>
                 <div>
-                  <p className="text-white font-semibold text-sm">Rajesh Kumar</p>
-                  <p className="text-purple-200 text-xs">Tech Director, TechCorp</p>
+                  <p className="text-white font-semibold text-sm">Ashook Yargalandha</p>
+                  <p className="text-purple-200 text-xs">CEO,Inspectx</p>
                 </div>
               </div>
             </div>
@@ -115,14 +115,14 @@ const HeroSection = () => {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-purple-300 flex items-center justify-center text-white font-bold">P</div>
                 <div>
-                  <p className="text-white font-semibold text-sm">Priya Sharma</p>
-                  <p className="text-purple-200 text-xs">CEO, FinanceHub Ltd</p>
+                  <p className="text-white font-semibold text-sm"></p>
+                  <p className="text-purple-200 text-xs">P K Podnik</p>
                 </div>
               </div>
             </div>
 
             {/* Testimonial Card 3 */}
-            <div className="bg-white bg-opacity-10 p-8 rounded-lg border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300 backdrop-blur-sm">
+            {/* <div className="bg-white bg-opacity-10 p-8 rounded-lg border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300 backdrop-blur-sm">
               <div className="flex items-center mb-4">
                 <div className="flex text-yellow-300">
                   {'⭐'.repeat(5)}
@@ -138,7 +138,7 @@ const HeroSection = () => {
                   <p className="text-purple-200 text-xs">CTO, SecureNet Inc</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
