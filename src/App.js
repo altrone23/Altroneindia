@@ -19,7 +19,6 @@ function App() {
         <ServicesSection />
         <IndustriesSection />
         <TeamSection />
-        <CareersSection />
         <ContactSection />
       </main>
       <Footer />
