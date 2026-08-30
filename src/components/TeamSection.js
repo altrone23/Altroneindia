@@ -9,7 +9,7 @@ const TeamSection = () => {
     {
       name: "Balavignesh A U",
       position: "Founder & CEO",
-      image: "/people/Bala.jpg",
+      image: "/people/Bala.jpeg",
       bio: "Balavignesh has hands-on experience in full-stack development, having built platforms like INSPECTX Pro. He founded AltroneIndia with a vision to create impactful, tech-driven solutions for modern businesses",
       social: {
         linkedin: "www.linkedin.com/in/balavignesh1010",
