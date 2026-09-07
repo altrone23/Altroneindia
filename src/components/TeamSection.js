@@ -92,12 +92,7 @@ const TeamSection = () => {
         if (member) observer.unobserve(member);
       });
     };
-  }, []);
-
-  // Reset the refs array when team members change
-  useEffect(() => {
-    teamMemberRefs.current = teamMemberRefs.current.slice(0, teamMembers.length + techLeads.length);
-  }, [teamMembers, techLeads]);
+  }, [];
 
   return (
     <section id="team" className="py-20 px-5" ref={sectionRef}>

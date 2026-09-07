@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 
 const IndustriesSection = () => {
   const [flippedCard, setFlippedCard] = useState(null);
   const sectionRef = useRef(null);
   const cardRefs = useRef([]);
 
-  const industries = [
+  const industries = useMemo(() => [
     {
       name: "Healthcare",
       description: "AI-driven diagnostic tools and secure health data management solutions.",
@@ -72,7 +72,7 @@ const IndustriesSection = () => {
         "Carbon footprint reduction"
       ]
     }
-  ];
+  ], []);
 
   useEffect(() => {
     const observerOptions = {
@@ -91,26 +91,23 @@ const IndustriesSection = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    const currentSection = sectionRef.current;
+    const currentCards = [...cardRefs.current];
     
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    if (currentSection) observer.observe(currentSection);
     
-    cardRefs.current.forEach((card) => {
+    currentCards.forEach((card) => {
       if (card) observer.observe(card);
     });
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (currentSection) observer.unobserve(currentSection);
       
-      cardRefs.current.forEach((card) => {
+      currentCards.forEach((card) => {
         if (card) observer.unobserve(card);
       });
     };
   }, []);
-
-  // Reset the refs array when industries change
-  useEffect(() => {
-    cardRefs.current = cardRefs.current.slice(0, industries.length);
-  }, [industries]);
 
   const handleCardFlip = (index) => {
     if (flippedCard === index) {

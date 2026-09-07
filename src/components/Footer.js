@@ -296,21 +296,21 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6">
               <a 
-                href="#" 
+                href="/privacy" 
                 className="text-gray-400 text-sm hover:text-accent-500 transition-colors relative group"
               >
                 Privacy Policy
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
               <a 
-                href="#" 
+                href="/terms" 
                 className="text-gray-400 text-sm hover:text-accent-500 transition-colors relative group"
               >
                 Terms of Service
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
               <a 
-                href="#" 
+                href="/cookies" 
                 className="text-gray-400 text-sm hover:text-accent-500 transition-colors relative group"
               >
                 Cookie Policy

@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState(null);
   const sectionRef = useRef(null);
   const cardRefs = useRef([]);
 
-  const services = [
+  const services = useMemo(() => [
     { 
       title: "AI/ML Solutions", 
       description: "Custom models for smart business solutions that transform your data into actionable insights.",
@@ -42,7 +42,7 @@ const ServicesSection = () => {
       icon: "☁️",
       features: ["Cloud Migration", "Serverless Architecture", "DevOps", "Infrastructure as Code"]
     },
-  ];
+  ], []);
 
   useEffect(() => {
     const observerOptions = {
@@ -61,34 +61,31 @@ const ServicesSection = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    const currentSection = sectionRef.current;
+    const currentCards = [...cardRefs.current];
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentSection) {
+      observer.observe(currentSection);
     }
     
-    cardRefs.current.forEach((card) => {
+    currentCards.forEach((card) => {
       if (card) {
         observer.observe(card);
       }
     });
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
       
-      cardRefs.current.forEach((card) => {
+      currentCards.forEach((card) => {
         if (card) {
           observer.unobserve(card);
         }
       });
     };
   }, []);
-
-  // Reset the refs array when services change
-  useEffect(() => {
-    cardRefs.current = cardRefs.current.slice(0, services.length);
-  }, [services]);
 
   return (
     <section className="py-20 px-5" id="services" ref={sectionRef}>
